@@ -46,6 +46,8 @@ dependencies:
   faker: ^2.0.0
   random_date: ^0.0.7
   jiffy: ^5.0.0
+  scroll_snap_list: ^0.9.1
+
 
 dev_dependencies:
   flutter_lints: ^1.0.0

@@ -3,9 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../../constant.dart';
-import 'confirm_screen.dart';
 
+import 'confirm_screen.dart';
 
 class AddVideoScreen extends StatelessWidget {
   const AddVideoScreen({Key? key}) : super(key: key);
@@ -82,19 +81,21 @@ class AddVideoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       body: Center(
         child: InkWell(
           onTap: () => showOptionsDialog(context),
           child: Container(
             width: 190,
             height: 50,
-            decoration: BoxDecoration(color: buttonColor),
+            decoration: BoxDecoration(
+                color: Theme.of(context).canvasColor,
+                borderRadius: const BorderRadius.all(Radius.circular(30))),
             child: const Center(
               child: Text(
                 'Add Video',
                 style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),

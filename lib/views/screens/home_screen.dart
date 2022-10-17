@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/glowing_widget_button.dart';
 import '../widgets/icon_button.dart';
+import 'addProduct.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -143,12 +144,8 @@ class __BottomNavigationBarState extends State<_BottomNavigationBar> {
                   onPressed: () {
                     showDialog(
                       context: context,
-                      builder: (BuildContext context) => const Dialog(
-                        child: AspectRatio(
-                          aspectRatio: 8 / 7,
-                          child: AddVideoScreen(),
-                        ),
-                      ),
+                      builder: (BuildContext context) =>  AddProduct(),
+                      
                     );
                   },
                 ),

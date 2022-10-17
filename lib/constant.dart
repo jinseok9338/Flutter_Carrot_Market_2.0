@@ -1,5 +1,6 @@
 
 import 'package:carrot_market_2_0/views/screens/add_video_screen.dart';
+import 'package:carrot_market_2_0/views/screens/addProduct.dart';
 
 import 'package:carrot_market_2_0/views/screens/chat/chat_screen.dart';
 import 'package:carrot_market_2_0/views/screens/profile_screen.dart';
@@ -15,8 +16,8 @@ List navigatePages(String uid) {
   return [
     VideoScreen(),
     SearchScreen(),
-    const AddVideoScreen(),
-    const ChatScreen(), // this is to do .. I will add chat functionality..
+    const AddProduct(),
+    const ChatScreen(),
     ProfileScreen(uid: uid),
   ];
 }
