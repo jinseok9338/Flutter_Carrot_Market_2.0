@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../helpers.dart';
+import '../widgets/form_widget.dart';
 import '../widgets/icon_button.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 
@@ -49,22 +50,22 @@ class _AddProductState extends State<AddProduct> {
       padding: const EdgeInsets.symmetric(horizontal: 4.0),
       child: Container(
         child: itemIndex == data.length
-            ? Center(child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-              children:  [
-                Icon(
-                  Icons.add,
-                  color: Theme.of(context).cardColor,
-                  size: 60.0,
-                ),
-                Text("Add Video or pricture",
-                  style: TextStyle(
-                    color: Theme.of(context).cardColor
+            ? Center(
+                child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.add,
+                    color: Theme.of(context).cardColor,
+                    size: 60.0,
                   ),
-                ),
-              ],
-            ))
+                  Text(
+                    "Add Video or pricture",
+                    style: TextStyle(color: Theme.of(context).cardColor),
+                  ),
+                ],
+              ))
             : Image.network(data[itemIndex]),
         decoration: const BoxDecoration(
           color: Colors.grey,
@@ -103,6 +104,13 @@ class _AddProductState extends State<AddProduct> {
                     children: [Expanded(child: _buildCarousel(context))],
                   ),
                 ),
+              ),
+            ),
+            SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  const FormWidget(),
+                ],
               ),
             ),
           ],

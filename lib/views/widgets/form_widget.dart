@@ -26,7 +26,7 @@ class _FormWidgetState extends State<FormWidget> {
               children: [
                 Text(
                   'Add Task',
-                  style: TextStyle(color: Theme.of(context).primaryColor),
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],
             ),
@@ -37,8 +37,8 @@ class _FormWidgetState extends State<FormWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Text(
-                  'Fill out the details below to add a new task.',
-                  style: TextStyle(color: Theme.of(context).primaryColor),
+                  '  Fill out the details below to add a new task.',
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],
             ),
@@ -51,19 +51,19 @@ class _FormWidgetState extends State<FormWidget> {
               obscureText: false,
               decoration: InputDecoration(
                 labelText: 'Task Name',
-                labelStyle: FlutterFlowTheme.of(context).subtitle2,
+                labelStyle: Theme.of(context).textTheme.bodyMedium,
                 hintText: 'Enter your task here....',
-                hintStyle: FlutterFlowTheme.of(context).subtitle2,
+                hintStyle: Theme.of(context).textTheme.bodyMedium,
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    color: Theme.of(context).primaryColor,
                     width: 1,
                   ),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    color: Theme.of(context).primaryColor,
                     width: 1,
                   ),
                   borderRadius: BorderRadius.circular(8),
@@ -94,19 +94,19 @@ class _FormWidgetState extends State<FormWidget> {
               obscureText: false,
               decoration: InputDecoration(
                 labelText: 'Details',
-                labelStyle: FlutterFlowTheme.of(context).subtitle2,
+                labelStyle: Theme.of(context).textTheme.bodyMedium,
                 hintText: 'Enter a description here...',
-                hintStyle: FlutterFlowTheme.of(context).subtitle2,
+                hintStyle: Theme.of(context).textTheme.bodyMedium,
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    color: Theme.of(context).backgroundColor,
                     width: 1,
                   ),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    color: Theme.of(context).backgroundColor,
                     width: 1,
                   ),
                   borderRadius: BorderRadius.circular(8),
@@ -126,9 +126,9 @@ class _FormWidgetState extends State<FormWidget> {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 filled: true,
-                fillColor: FlutterFlowTheme.of(context).primaryBackground,
+                fillColor: Theme.of(context).backgroundColor,
               ),
-              style: FlutterFlowTheme.of(context).bodyText1,
+              style: Theme.of(context).textTheme.bodyMedium,
               textAlign: TextAlign.start,
               maxLines: 3,
             ),
@@ -144,7 +144,7 @@ class _FormWidgetState extends State<FormWidget> {
                     Navigator.pop(context);
                   },
                   child: Center(
-                    child: Text("Text"),
+                    child: Text("Cancel"),
                   ),
                 ),
                 TextButton(
@@ -152,7 +152,7 @@ class _FormWidgetState extends State<FormWidget> {
                     Navigator.pop(context);
                   },
                   child: Center(
-                    child: Text("Text"),
+                    child: Text("Add Product"),
                   ),
                 ),
               ],
